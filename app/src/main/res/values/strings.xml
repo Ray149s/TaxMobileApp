@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ABC Tax Company</string>
+    <string name="welcome_message">Welcome to ABC Tax Company</string>
+    <string name="scan_documents">Scan Documents</string>
+    <string name="my_documents">My Documents</string>
+    <string name="upload_to_dropbox">Upload to Dropbox</string>
+    <string name="select_document_type">Select Document Type</string>
+    <string name="drivers_license">Driver\'s License</string>
+    <string name="identification">Identification Document</string>
+    <string name="tax_form">Tax Form</string>
+    <string name="supporting_document">Supporting Document</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="retake">Retake</string>
+    <string name="use_photo">Use Photo</string>
+    <string name="review_document">Review Document</string>
+    <string name="sign_document">Sign Document</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="clear">Clear</string>
+    <string name="signature_prompt">Please sign below</string>
+    <string name="camera_permission_required">Camera permission is required to scan documents</string>
+    <string name="document_uploaded">Document uploaded successfully</string>
+    <string name="document_saved">Document saved</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="no_documents">No documents scanned yet</string>
+    <string name="document_signed">Document signed successfully</string>
+    <string name="dropbox_placeholder">Dropbox upload functionality (placeholder)</string>
+    <string name="upload_success">Upload successful!</string>
+    <string name="delete">Delete</string>
+    <string name="view">View</string>
+    <string name="sign">Sign</string>
+</resources>
