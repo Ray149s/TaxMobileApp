@@ -64,6 +64,11 @@ class SignatureActivity : AppCompatActivity() {
         try {
             // Get signature bitmap
             val signatureBitmap = signatureView.getSignatureBitmap()
+            
+            if (signatureBitmap == null) {
+                Toast.makeText(this, "Failed to create signature bitmap", Toast.LENGTH_SHORT).show()
+                return
+            }
 
             // Create signature file
             val signatureFile = documentManager.createSignatureFile(imageFile.nameWithoutExtension)

@@ -47,7 +47,9 @@ class DocumentManager(private val context: Context) {
     private fun getDocumentsDirectory(): File {
         val dir = File(context.getExternalFilesDir(null), DOCUMENTS_DIR)
         if (!dir.exists()) {
-            dir.mkdirs()
+            if (!dir.mkdirs()) {
+                Log.e(TAG, "Failed to create documents directory")
+            }
         }
         return dir
     }
@@ -58,7 +60,9 @@ class DocumentManager(private val context: Context) {
     private fun getSignaturesDirectory(): File {
         val dir = File(context.getExternalFilesDir(null), SIGNATURES_DIR)
         if (!dir.exists()) {
-            dir.mkdirs()
+            if (!dir.mkdirs()) {
+                Log.e(TAG, "Failed to create signatures directory")
+            }
         }
         return dir
     }

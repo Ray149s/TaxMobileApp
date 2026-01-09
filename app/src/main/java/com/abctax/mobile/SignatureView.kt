@@ -81,11 +81,16 @@ class SignatureView @JvmOverloads constructor(
     /**
      * Gets the signature as a bitmap
      */
-    fun getSignatureBitmap(): Bitmap {
-        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
-        val canvas = Canvas(bitmap)
-        canvas.drawColor(Color.WHITE)
-        draw(canvas)
-        return bitmap
+    fun getSignatureBitmap(): Bitmap? {
+        return try {
+            val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+            val canvas = Canvas(bitmap)
+            canvas.drawColor(Color.WHITE)
+            draw(canvas)
+            bitmap
+        } catch (e: OutOfMemoryError) {
+            android.util.Log.e("SignatureView", "OutOfMemoryError creating signature bitmap", e)
+            null
+        }
     }
 }

@@ -51,6 +51,7 @@ class DocumentReviewActivity : AppCompatActivity() {
         val imageView = findViewById<ImageView>(R.id.ivDocument)
         Glide.with(this)
             .load(imageFile)
+            .error(android.R.drawable.ic_menu_report_image)
             .into(imageView)
     }
 
